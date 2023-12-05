@@ -1,5 +1,5 @@
 pipeline {
-  agent { node { label 'slave-build-node' } }
+  agent any
   
   stages {
   
@@ -9,15 +9,15 @@ pipeline {
          }
       }
       
-    stage('pm2 install') {
-      steps {
-         sh 'sudo npm i pm2 -g'
-        }
-      }
+ //   stage('pm2 install') {
+ //     steps {
+ //        sh 'sudo npm i pm2 -g'
+ //       }
+ //     }
       
     stage('deploy') {
       steps {
-         sh 'pm2 start index.js'
+         sh 'pm2 restart all'
          }
        }
        
