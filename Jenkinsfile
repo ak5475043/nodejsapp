@@ -9,9 +9,9 @@ pipeline {
          }
       }
       
- //   stage('pm2 install') {
+ //   stage('deploying') {
  //     steps {
- //        sh 'sudo npm i pm2 -g'
+ //        sh 'sudo cp -r * /home/ubuntu/'
  //       }
  //     }
       
