@@ -17,7 +17,7 @@ pipeline {
       
     stage('deploy') {
       steps {
-         sh 'pm2 restart all'
+         sh '/usr/local/bin/pm2 restart all'
          }
        }
        
